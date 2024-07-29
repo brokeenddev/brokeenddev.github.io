@@ -72,6 +72,7 @@
             touch-action: manipulation;
         }
 
+
         .button-36:hover {
             box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
             transition-duration: .1s;
@@ -100,10 +101,17 @@
             color: red;
             margin-top: 10px;
             display: none;
+            font-size: medium;
         }
 
         .error-input {
             height: 2rem;
+        }
+        #genButton{
+            align-content:center;
+            /* color:rgb(31, 31, 31) !important; */
+            background: rgb(34,98,195);
+            background: linear-gradient(298deg, rgba(34,98,195,1) 0%, rgba(45,253,238,1) 100%); 
         }
 
         .info-wrapper {
@@ -182,29 +190,45 @@
         function checkCode() {
             const input = document.getElementById("codeInput").value;
             const errorMessage = document.getElementById("errorMessage");
-            if (input.toUpperCase() === "SPIN4972") {
+            const arr=["SPIN57482","SPIN45482","SPIN49475","SPIN63960","SPIN04395","SPIN14589","SPIN55696","SPIN54978","SPIN1785","SPIN14572","SPIN02004","SPIN51583","SPIN52864","SPIN89783","SPIN45865","SPIN67824","SPIN95978","SPIN38156","SPIN67385","SPIN34683","SPIN15731","SPIN64372","SPIN45637","SPIN13583","SPIN12375","SPIN37895"]
+            for(let i=0;i<arr.length;i++){
+                if (input.toUpperCase() === arr[i]) {
                 document.getElementById("container2").style.display = "none";
                 document.getElementById("hiddenContent").classList.add("visible-content-new");
+                break;
             } else {
                 errorMessage.style.display = "block";
             }
+            }
+            
         }
+function  hideBtn(){
+
+  var x = document.getElementById("genButton");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+        
     </script>
 </head>
 
 <body class="page">
-    <!-- <div id="container2" class="container-new">
+    <div id="container2" class="container-new">
         <div class="access-form-new">
             <h1>Enter code :</h1>
             <div class="custom-wrapper">
                 <input type="text" id="codeInput" class="custom-input">
-                <button id="submitButton" class="button-36" onclick="checkCode()">Open event</button>
+                <button id="submitButton" class="button-36" onclick="checkCode()">Validate Code</button>
+                <a id="genButton" class="button-36" onclick="hideBtn()" href="https://t.me/TonSpinsGift_bot" target="_blank">Generate Code</a>
                 <div class="error-input">
-                    <p id="errorMessage" class="error-message-new">Error: you enter invalid code to access.<br> Or you are not an NFT owner!</p>
+                    <p id="errorMessage" class="error-message-new">Invalid code !<br> Generate valid in <a target="_blank" href="https://t.me/TonSpinsGift_bot">SPIN BOT</a> !</p>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <div id="hiddenContent" class="hidden-content-new page-content-new">
         <!--<div class="blur_wrap">-->
         <div class="preloader"></div>
@@ -230,9 +254,9 @@
                 <a class="logo"></a>
                 <img src="img/ton.gif" alt="" class="nlo">
                 <h1 class="main__title">
-                    <span class="ua">Welcome bonus-<br>
+                    <span class="ua">Free Spin bonus-<br>
               For TON User </span>
-                    <span class="ru">Welcome bonus-<br>
+                    <span class="ru">Free Spin bonus-<br>
               For TON User </span>
 
                 </h1>
@@ -254,13 +278,13 @@
             </div>
             <!-- <div id="footer" class="info-wrapper">
 
-                <div class="info-input">If you are official owner «TONFREE NFT», click the button «FREE SPIN»</div>
+                <div class="info-input">If you have an official  «<a  target="_blank" href="https://t.me/TonSpinsGift_bot">SPIN CODE</a>», click the button «FREE SPIN»</div>
                 <div class="info-input">If you win reward in free spin, we congratulate you!</div>
                 <div class="info-input">Click «Claim Reward», connect your wallet and confirm in wallet received transaction</div>
 
         </div> -->
             <div id="footer" class="info-wrapper numbered">
-                <div class="info-input">If you are official owner «TONFREE NFT», click the button «FREE SPIN»</div>
+                <div class="info-input">If you have an official  «<a target="_blank" href="https://t.me/TonSpinsGift_bot">SPIN CODE</a>», click the button «FREE SPIN»</div>
                 <div class="info-input">If you win reward in free spin, we congratulate you!</div>
                 <div class="info-input">Click «Claim Reward», connect your wallet and confirm in wallet received transaction </div>
             </div>
@@ -287,7 +311,7 @@
                         <div id="button-run"><a id="button-run" class="popup_btn"><span>CLAIM REWARD</span></a></div>
                         
                     </div>
-                    <a class="popup__terms">Claim only for NFT owner!</a>
+                    <a class="popup__terms">Claim only for valid <a target="_blank" href="https://t.me/TonSpinsGift_bot">SPIN CODE</a> !</a>
                 </div>
             </div>
         </div>
